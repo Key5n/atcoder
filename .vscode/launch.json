@@ -5,6 +5,20 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Launch b",
+      "request": "launch",
+      "mainClass": "b",
+      "projectName": "atcoder_d952f37a"
+    },
+    {
+      "type": "java",
+      "name": "Launch a",
+      "request": "launch",
+      "mainClass": "a",
+      "projectName": "atcoder_d952f37a"
+    },
+    {
       "name": "(gdb) Launch",
       "type": "cppdbg",
       "request": "launch",
