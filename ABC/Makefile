@@ -7,3 +7,4 @@ dir:
 
 clean:
 	rm **/*.exe
+
