@@ -7,20 +7,19 @@ int X;
 int A[2 * 100000];
 
 int main() {
-  vector<int> v;
-  cin >> N;
-  cin >> X;
+  cin >> N >> X;
+
+  set<int> s;
   for (int i = 0; i < N; i++) {
-    cin >> A[i];
-    v.push_back(A[i]);
+    int t;
+    cin >> t;
+    s.insert(t);
   }
-  sort(v.begin(), v.end());
-  for (int i = 0; i < N; i++) {
-    if (binary_search(v.begin(), v.end(), A[i] + X)) {
+  for (auto a : s) {
+    if (s.find(a + X) != s.end()) {
       cout << "Yes" << endl;
       return 0;
     }
   }
   cout << "No" << endl;
-  return 0;
 }
