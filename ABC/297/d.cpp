@@ -20,8 +20,8 @@ int main() {
     xをlong longにすると直る
     intを使うなくそが
     */
+    res += A / B;
     A %= B;
-    res += x;
     swap(A, B);
   }
   cout << res - 1 << endl;
