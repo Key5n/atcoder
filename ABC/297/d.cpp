@@ -3,34 +3,27 @@
 #include <iostream>
 using namespace std;
 int main() {
-  long A;
-  long B;
+  long long A;
+  long long B;
   cin >> A >> B;
-  int res = 0;
+  long long res = 0;
 
-  while (A - B != 0) {
-    if (A < B) {
-      int t = A;
-      A = B;
-      B = t;
-    }
+  if (A < B) {
+    swap(A, B);
+  }
 
-    if (B == 0) {
-      break;
-    }
+  while (B > 0) {
+    /*
     int x = A / B;
-    if (x > 1) {
-      A = A % B;
-      res += x;
-    } else if (x == 1) {
-      A -= B;
-      res++;
-    }
+    res += x;
+    とするとエラー
+    xをlong longにすると直る
+    intを使うなくそが
+    */
+    A %= B;
+    res += x;
+    swap(A, B);
   }
-  if (A == B) {
-    cout << 0 << endl;
-  } else {
-    cout << res - 1 << endl;
-  }
+  cout << res - 1 << endl;
   return 0;
 }
