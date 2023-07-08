@@ -1,19 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
+typedef int long long;
 typedef long long ll;
 
 int main()
 {
   int N, K;
   cin >> N >> K;
-  vector<ll> a(N), b(N);
-  int initial = 0;
-  vector<pair<ll, ll>> intake;
+  vector<int> a(N), b(N);
+  ll initial = 0;
+  vector<pair<int, ll>> intake;
 
   for (int i = 0; i < N; i++)
   {
     cin >> a[i] >> b[i];
-    initial += b[i];
+    initial += (ll)b[i];
     intake.push_back({a[i], -b[i]});
   }
   intake.push_back({0, initial});
