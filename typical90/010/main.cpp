@@ -12,22 +12,29 @@ int Sb[100000];
 int a[100000];
 int b[100000];
 
-int main(){
+int main()
+{
   cin >> n;
-  for(int i = 0; i < n; i++){
+  for (int i = 0; i < n; i++)
+  {
     cin >> c[i] >> p[i];
   }
   cin >> q;
-  for(int i = 0; i < q; i++){
+  for (int i = 0; i < q; i++)
+  {
     scanf("%d", &l[i]);
     scanf("%d", &r[i]);
   }
-    Sa[0] = p[0];
-  for(int i = 0; i < n; i++){
+  Sa[0] = p[0];
+  for (int i = 0; i < n; i++)
+  {
   }
-  for(int i = 0; i < q; i++){
-    for(int j = l[i]-1; j < r[i]; j++){
-      if(c[j] == 1) {
+  for (int i = 0; i < q; i++)
+  {
+    for (int j = l[i] - 1; j < r[i]; j++)
+    {
+      if (c[j] == 1)
+      {
         a[i] += p[j];
         continue;
       }
