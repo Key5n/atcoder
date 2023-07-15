@@ -1,3 +1,7 @@
 ac-library/
-*.exe
+**/*.exe
+**/*.out
+**/*.in
+tests/
 .vscode/
+**/contest.acc.json
